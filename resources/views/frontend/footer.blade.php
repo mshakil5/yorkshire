@@ -84,6 +84,15 @@
           </div>
           @endif
 
+          @if ($company->whatsapp)
+            <div class="contact-item">
+              <div class="contact-icon"><i class="bi bi-whatsapp"></i></div>
+              <div class="contact-info">
+                <p><a href="https://wa.me/{{ $company->whatsapp }}" target="_blank">Chat on WhatsApp</a></p>
+              </div>
+            </div>
+          @endif
+
           <div class="social-links">
             @if ($company->facebook)
             <a href="{{ $company->facebook }}"><i class="bi bi-facebook"></i></a>

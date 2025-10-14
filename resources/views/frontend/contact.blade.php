@@ -53,15 +53,17 @@
               </div>
             </div>
 
+            @if ($company->whatsapp)
             <div class="contact-card">
               <div class="icon-box">
-                <i class="bi bi-clock"></i>
+                <i class="bi bi-whatsapp"></i>
               </div>
               <div class="contact-text">
-                <h4>Open Hours</h4>
-                <p>{{ $company->opening_time }}</p>
+                <h4>WhatsApp</h4>
+                <p><a href="https://wa.me/{{ $company->whatsapp }}" target="_blank">{{ $company->whatsapp }}</a></p>
               </div>
             </div>
+            @endif
           </div>
 
           <div class="contact-form-container" data-aos="fade-up" data-aos-delay="400">
@@ -134,14 +136,13 @@
                             <a href="{{ $company->linkedin }}"><i class="bi bi-linkedin"></i></a>
                         @endif
                     </div>
-
-                    @if(session('success'))
-                      <div id="sent-message" class="alert alert-success mt-3">
-                          {{ session('success') }}
-                      </div>
-                    @endif
                 </div>
             </form>
+            @if(session('success'))
+              <div id="sent-message" class="alert alert-success mt-3">
+                  {{ session('success') }}
+              </div>
+            @endif
           </div>
         </div>
       </div>

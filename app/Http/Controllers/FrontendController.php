@@ -238,7 +238,7 @@ class FrontendController extends Controller
           );
       }
 
-      $company = CompanyDetails::select('address1', 'phone1', 'email1', 'google_map', 'opening_time', 'facebook', 'twitter', 'linkedin')->first();
+      $company = CompanyDetails::select('address1', 'phone1', 'email1', 'google_map', 'opening_time', 'facebook', 'twitter', 'linkedin', 'whatsapp')->first();
       return view('frontend.contact', compact('contact', 'company'));
     }
 

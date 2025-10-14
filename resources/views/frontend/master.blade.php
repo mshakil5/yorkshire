@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 @php
-    $company = App\Models\CompanyDetails::select('company_name', 'fav_icon', 'google_site_verification', 'footer_content', 'facebook', 'twitter', 'linkedin', 'website', 'phone1', 'email1', 'address1', 'company_logo', 'company_reg_number')->first();
+    $company = App\Models\CompanyDetails::select('company_name', 'fav_icon', 'google_site_verification', 'footer_content', 'facebook', 'twitter', 'linkedin', 'website', 'phone1', 'email1', 'address1', 'company_logo', 'company_reg_number', 'whatsapp')->first();
 
     $products = App\Models\Product::where('status', 1)->select('id', 'title', 'icon', 'short_description', 'slug')->orderByRaw('sl = 0, sl ASC')->orderBy('id', 'desc')->get();
 @endphp
