@@ -116,7 +116,7 @@
             <a href="{{ route('faq') }}">FAQ</a>
           </div>
           <div class="credits">
-            Developed by <a href="{{ $company->website ?? '#' }}">{{ $company->company_name ?? 'Your Company' }}</a>
+            Developed by <a href="{{ $company->website ?? '#' }}">{{ $company->company_name ?? '' }}</a>
           </div>
         </div>
       </div>

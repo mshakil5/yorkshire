@@ -1,12 +1,12 @@
 @php
     $contents = App\Models\Content::with('images')
         ->where('type', 1)
+        ->whereHas('images') 
         ->where('status', 1)
-        ->latest()
         ->get();
 @endphp
 
-@if($contents)
+@if($contents->isNotEmpty())
 <section id="portfolio" class="portfolio section">
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">

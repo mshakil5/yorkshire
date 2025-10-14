@@ -44,7 +44,7 @@ class ProductController extends Controller
                       </button>
                       <div class="dropdown-menu p-2" aria-labelledby="actionMenu'.$row->id.'" style="min-width: 160px;">
                         <a class="btn btn-success btn-sm btn-block mb-1" href="'.route('products.features.index', $row->id).'">Features</a>
-                        <a class="btn btn-info btn-sm btn-block mb-1" href="'.route('products.clients.index', $row->id).'">Sliders</a>
+                        <a class="btn btn-info btn-sm btn-block mb-1 d-none" href="'.route('products.clients.index', $row->id).'">Sliders</a>
                         <button class="btn btn-primary btn-sm btn-block mb-1 steps" data-id="'.$row->id.'">Steps</button>
                         <a class="btn btn-warning btn-sm btn-block mb-1" href="'.route('products.faqs.index', $row->id).'">FAQs</a>
                         <hr class="dropdown-divider">

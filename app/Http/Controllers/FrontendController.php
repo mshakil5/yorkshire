@@ -36,7 +36,7 @@ class FrontendController extends Controller
       $company = CompanyDetails::select('meta_title', 'meta_description', 'meta_keywords', 'meta_image')->first();
 
       $hero = Master::firstOrCreate(['name' => 'hero']);
-      $about1 = Master::firstOrCreate(['name' => 'about1']);
+      $about = Master::firstOrCreate(['name' => 'about']);
       $service = Master::firstOrCreate(['name' => 'service']);
 
       $sliders = Cache::remember('active_sliders', now()->addDay(), function () {
@@ -56,7 +56,7 @@ class FrontendController extends Controller
           $company?->meta_image ? asset('images/company/meta/' . $company->meta_image) : null
       );
 
-      return view('frontend.index', compact('hero','sliders','about1','service','sections','products'));
+      return view('frontend.index', compact('hero','sliders','about','service','sections','products'));
     }
 
     public function type($slug)

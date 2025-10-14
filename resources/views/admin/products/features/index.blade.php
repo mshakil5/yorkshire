@@ -64,7 +64,7 @@
                                 <div class="col-md-4">
                                   <div class="form-group">
                                     <label>Features</label>
-                                    <textarea class="form-control" id="features" name="features" rows="3" placeholder="Comma separated"></textarea>
+                                    <textarea class="form-control" id="features" name="features" rows="3" placeholder=" | separated"></textarea>
                                   </div>
                                 </div>
                                 <div class="col-md-4 d-none">

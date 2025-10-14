@@ -39,17 +39,18 @@
       <div class="row g-5 align-items-center">
         @if($key % 2 == 0)
         <div class="col-lg-6" data-aos="fade-left">
-          <h2 class="display-4 fw-bold mb-4">{{ $service->title }}</h2>
-          <p class="lead mb-4">{!! $service->long_description !!}</p>
+          <h2 class="display-4 fw-bold mb-4">{{ $feature->title }}</h2>
+          <p class="lead mb-4">{!! $feature->description !!}</p>
 
           @if(!empty($feature->features))
-            <div class="features">
-              <ul class="check-list" data-aos="fade-up" data-aos-delay="200">
-                @foreach(explode(',', $feature->features) as $item)
-                  <li><i class="bi bi-check-circle"></i> {{ trim($item) }}</li>
-                @endforeach
-              </ul>
-            </div>
+          {{ $feature->features }}
+              <div class="features">
+                  <ul class="check-list" data-aos="fade-up" data-aos-delay="200">
+                      @foreach(array_map('trim', explode('|', $feature->features)) as $item)
+                          <li><i class="bi bi-check-circle"></i> {{ $item }}</li>
+                      @endforeach
+                  </ul>
+              </div>
           @endif
         </div>
         <div class="col-lg-6 position-relative">
@@ -64,17 +65,18 @@
           </div>
         </div>
         <div class="col-lg-6" data-aos="fade-left">
-          <h2 class="display-4 fw-bold mb-4">{{ $service->title }}</h2>
-          <p class="lead mb-4">{!! $service->long_description !!}</p>
+          <h2 class="display-4 fw-bold mb-4">{{ $feature->title }}</h2>
+          <p class="lead mb-4">{!! $feature->description !!}</p>
 
           @if(!empty($feature->features))
-            <div class="features">
-              <ul class="check-list" data-aos="fade-up" data-aos-delay="200">
-                @foreach(explode(',', $feature->features) as $item)
-                  <li><i class="bi bi-check-circle"></i> {{ trim($item) }}</li>
-                @endforeach
-              </ul>
-            </div>
+          {{ $feature->features }}
+              <div class="features">
+                  <ul class="check-list" data-aos="fade-up" data-aos-delay="200">
+                      @foreach(array_map('trim', explode('|', $feature->features)) as $item)
+                          <li><i class="bi bi-check-circle"></i> {{ $item }}</li>
+                      @endforeach
+                  </ul>
+              </div>
           @endif
         </div>
         @endif
@@ -172,10 +174,10 @@
   </section>
   @endif
 
-  @include('frontend.partials.gallery')
+  @include('frontend.partials.features')
 
   @include('frontend.partials.cta')
   
-  @include('frontend.partials.features')
+  @include('frontend.partials.gallery')
 
 @endsection

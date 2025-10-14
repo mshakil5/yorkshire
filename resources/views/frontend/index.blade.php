@@ -133,13 +133,13 @@
       <div class="row g-5 align-items-center">
         <div class="col-lg-6 position-relative">
           <div class="about-img" data-aos="fade-right">
-            <img src="{{ asset('images/meta_image/' . $about1->meta_image) }}" class="img-fluid" alt="{{ $about1->short_title ?? '' }}">
+            <img src="{{ asset('images/meta_image/' . $about->meta_image) }}" class="img-fluid" alt="{{ $about->short_title ?? '' }}">
           </div>
         </div>
 
         <div class="col-lg-6" data-aos="fade-left">
-          <h2 class="display-4 fw-bold mb-4">{{ $about1->short_title }}</h2>
-          <p class="lead mb-4">{!! $about1->long_description !!}</p>
+          <h2 class="display-4 fw-bold mb-4">{{ $about->short_title }}</h2>
+          <p class="lead mb-4">{!! $about->long_description !!}</p>
 
           <div class="features">
             <a href="{{ route('home') }}#services" class="btn btn-primary btn-lg mt-4" data-aos="fade-up" data-aos-delay="300">View Our Services</a>
