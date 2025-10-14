@@ -8,7 +8,7 @@
           analyse usage, and support our marketing efforts.
         </p>
         <div class="cookie-buttons mt-3">
-          <button class="btn btn-get-started" onclick="acceptCookies()">Accept</button>
+          <button class="btn btn-primary" onclick="acceptCookies()">Accept</button>
         </div>
       </div>
     </div>
