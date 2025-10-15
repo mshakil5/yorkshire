@@ -617,6 +617,12 @@ h6 {
   transition: 0.3s;
 }
 
+/* @media (max-width: 768px) {
+  .footer .footer-links ul li {
+    justify-content: center;
+  }
+} */
+
 .footer .footer-links ul li:hover {
   transform: translateX(5px);
 }

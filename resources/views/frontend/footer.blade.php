@@ -127,10 +127,10 @@
           <div class="footer-bottom-links">
             <a href="{{ route('privacy-policy') }}">Privacy Policy</a>
             <a href="{{ route('terms-and-conditions') }}">Terms of Service</a>
-            <a href="{{ route('faq') }}">FAQ</a>
+            {{-- <a href="{{ route('faq') }}">FAQ</a> --}}
           </div>
           <div class="credits">
-            Developed by <a href="https://www.mentosoftware.co.uk/" target="_blank">Mento Soft</a>
+            Designed & Developed by <a href="https://www.mentosoftware.co.uk/" target="_blank">Mento Soft</a>
           </div>
         </div>
       </div>
