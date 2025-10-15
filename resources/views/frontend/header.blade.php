@@ -1,8 +1,11 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
-        {{-- <img src="{{ asset('images/company/' . $company->company_logo) }}" alt="{{ $company->company_name ?? '' }}"> --}}
         <a href="{{ route('home') }}" class="logo d-flex align-items-center">
-        <h1 class="sitename">{{ $company->company_name ?? '' }}</h1>
+            <img src="{{ asset('images/company/' . $company->company_logo) }}" 
+                alt="{{ $company->company_name ?? '' }}" class="img-fluid">
+        </a>
+        <a href="{{ route('home') }}" class="logo d-flex align-items-center">
+        {{-- <h1 class="sitename">{{ $company->company_name ?? '' }}</h1> --}}
         </a>
         <nav id="navmenu" class="navmenu">
         <ul>
