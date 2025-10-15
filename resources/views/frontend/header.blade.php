@@ -3,9 +3,7 @@
         <a href="{{ route('home') }}" class="logo d-flex align-items-center">
             <img src="{{ asset('images/company/' . $company->company_logo) }}" 
                 alt="{{ $company->company_name ?? '' }}" class="img-fluid">
-        </a>
-        <a href="{{ route('home') }}" class="logo d-flex align-items-center">
-        {{-- <h1 class="sitename">{{ $company->company_name ?? '' }}</h1> --}}
+             <h1 class="sitename">{{ $company->company_name ?? '' }}</h1>
         </a>
         <nav id="navmenu" class="navmenu">
         <ul>

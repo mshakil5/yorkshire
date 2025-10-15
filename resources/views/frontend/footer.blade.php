@@ -1,13 +1,18 @@
 <footer id="footer" class="footer dark-background">
-  <div class="container">
-    <div class="row">
+  <div class="container text-center">
+    <div class="row justify-content-center">
 
       <div class="col-lg-3 col-md-6">
-        <div class="footer-content">
-          <a href="{{ route('home') }}" class="logo d-flex align-items-center mb-4">
-            <span class="sitename">{{ $company->company_name ?? 'Company Name' }}</span>
+        <div class="footer-content text-center">
+          <a href="{{ route('home') }}" class="logo d-flex align-items-center justify-content-center">
+            <img src="{{ asset('images/company/' . $company->footer_logo) }}" 
+                alt="{{ $company->company_name ?? '' }}" 
+                class="img-fluid me-2"
+                style="max-height: 60px; width: auto;">
+            <h1 class="sitename mb-0" style="font-size: 22px;">{{ $company->company_name ?? '' }}</h1>
           </a>
-          <p class="mb-4">{{ $company->footer_content ?? 'Your footer description goes here.' }}</p>
+
+          <p class="mb-4 mt-3">{{ $company->footer_content ?? '' }}</p>
 
           <div class="newsletter-form d-none">
             <h5>Stay Updated</h5>
@@ -35,7 +40,7 @@
 
       <div class="col-lg-1"></div>
 
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6 text-center">
         <div class="footer-links">
           <h4>Navigation</h4>
           <ul>
@@ -125,7 +130,7 @@
             <a href="{{ route('faq') }}">FAQ</a>
           </div>
           <div class="credits">
-            Developed by <a href="{{ $company->website ?? '#' }}">{{ $company->company_name ?? '' }}</a>
+            Developed by <a href="https://www.mentosoftware.co.uk/" target="_blank">Mento Soft</a>
           </div>
         </div>
       </div>
