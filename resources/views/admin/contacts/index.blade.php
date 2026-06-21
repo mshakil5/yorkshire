@@ -87,6 +87,7 @@
                 $('#view-last-name').text(data.last_name);
                 $('#view-email').text(data.email);
                 $('#view-phone').text(data.phone || '');
+                $('#view-company').text(data.company || '');
                 $('#view-subject').text(data.subject);
                 $('#view-message').text(data.message);
                 $('#view-date').text(data.formatted_created_at);
