@@ -262,10 +262,7 @@ class FrontendController extends Controller
 
         $contactEmails = ContactEmail::where('status', 1)->pluck('email');
 
-        // foreach ($contactEmails as $contactEmail) {
-        //     Mail::mailer('gmail')->to($contactEmail)
-        //         ->send(new ContactMail($contact));
-        // }
+        Mail::to(config('mail.from.address'))->send(new ContactMail($contact));
 
         return back()->with('success', 'Your message has been sent successfully!');
     }

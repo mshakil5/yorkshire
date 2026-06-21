@@ -165,7 +165,7 @@
                     <p>Mail Body</p>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-none">
                 <a href="{{ route('allcontactemail') }}" class="nav-link {{ Route::is('allcontactemail') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-envelope"></i>
                     <p>Contact Email</p>
