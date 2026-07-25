@@ -1,17 +1,24 @@
 @extends('frontend.master')
 
 @section('content')
-  <div class="page-title">
-    <div class="heading">
-    </div>
-    <nav class="breadcrumbs">
-      <div class="container">
-        <ol>
-          <li><a href="{{ route('home') }}">Home</a></li>
-          <li class="current">Contact</li>
-        </ol>
+  {{-- Page Title Banner Section --}}
+  <div class="page-title" style="background-image: url('{{ $contact->meta_image ? asset('images/meta_image/' . $contact->meta_image) : asset('frontend/assets/img/default-banner.jpg') }}'); background-size: cover; background-position: center; position: relative; padding: 80px 0;">
+    
+    {{-- Dark Overlay for better text readability --}}
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgb(255 255 255 / 50%); z-index: 1;"></div>
+    
+    <div class="container" style="position: relative; z-index: 2; text-align: center;">
+      <div class="heading">
+        {{-- H1 tag is crucial for SEO --}}
+        <h1 style="color: #000000; font-size: 2.5rem; margin-bottom: 15px; text-transform: uppercase; font-weight: 700;">{{ $contact->title ?? 'Contact Us' }}</h1>
       </div>
-    </nav>
+      <nav class="breadcrumbs">
+        <ol style="display: flex; justify-content: center; padding: 0; margin: 0; list-style: none;">
+          <li style="margin: 0 10px;"><a href="{{ route('home') }}" style="color: #000000; text-decoration: none;">Home</a></li>
+          <li class="current" style="color: #000000;">Contact</li>
+        </ol>
+      </nav>
+    </div>
   </div>
 
   <section id="contact" class="contact section light-background">
